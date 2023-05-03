@@ -1,0 +1,26 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, clothes TEXT, size INTEGER, quantity INTEGER, price INTEGER);
+
+INSERT INTO store VALUES (1, 'blouse1', 4, 5, 30);
+INSERT INTO store VALUES (2, 'Blouse2', 6, 3, 32);
+INSERT INTO store VALUES (3, 'Jeans1', 7, 9, 40);
+INSERT INTO store VALUES (4, 'Jeans2', 3, 5, 45);
+INSERT INTO store VALUES (5, 'Skirt1', 4, 6, 35);
+INSERT INTO store VALUES (6, 'Skirt2', 2, 8, 36);
+INSERT INTO store VALUES (7, 'Socks', 10, 10, 13);
+INSERT INTO store VALUES (8, 'Top', 6, 5, 22);
+INSERT INTO store VALUES (9, 'BodyLotion', 0, 15, 12);
+INSERT INTO store VALUES (10, 'Shorts', 9, 11, 33);
+INSERT INTO store VALUES (11, 'BikerShorts', 11, 2, 36);
+INSERT INTO store VALUES (12, 'SportsBra', 4, 6, 21);
+INSERT INTO store VALUES (13, 'HeadBand',2, 13, 15);
+INSERT INTO store VALUES (14, 'Leggings', 7, 17, 39);
+INSERT INTO store VALUES (15, 'Jeggings', 2, 20, 49);
+
+--diaplay data base ordered by price.
+SELECT * FROM store ORDER BY price DESC;
+
+--display data base ordered by clothes.
+SELECT clothes, price FROM store;
+
+--total sum of items from store.
+SELECT SUM(quantity) FROM store;
